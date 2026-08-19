@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="theme-color" content="#111111">
+    <meta name="theme-color" content="#0b0b0b">
 
     <title>Dr. Alex Baba | Northbridge Stantech Group</title>
 
@@ -15,168 +14,397 @@
 
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #111111;
-            color: #ffffff;
+            padding: 25px 18px;
             min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at top, #252525 0%, #0b0b0b 55%);
+            color: #ffffff;
+
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 24px;
         }
 
         .card {
             width: 100%;
-            max-width: 420px;
-            background: #1d1d1d;
-            border-radius: 24px;
-            padding: 36px 25px 28px;
+            max-width: 430px;
+
+            background: rgba(28, 28, 28, 0.97);
+
+            border: 1px solid rgba(201, 162, 39, 0.25);
+
+            border-radius: 28px;
+
+            padding: 35px 25px 28px;
+
             text-align: center;
-            box-shadow: 0 20px 60px rgba(0,0,0,.45);
+
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, 0.6);
         }
 
-        .avatar {
-            width: 88px;
-            height: 88px;
+        /* PROFILE PHOTO */
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+
+            object-fit: cover;
+
+            display: block;
+
             margin: 0 auto 20px;
+
             border-radius: 50%;
-            background: #c9a227;
-            color: #111111;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            font-weight: 700;
+
+            border: 3px solid #c9a227;
+
+            box-shadow:
+                0 8px 30px rgba(0, 0, 0, 0.5);
         }
+
+
+        /* COMPANY LOGO */
+
+        .company-logo {
+            width: auto;
+            max-width: 190px;
+            max-height: 65px;
+
+            object-fit: contain;
+
+            display: block;
+
+            margin: 0 auto 20px;
+        }
+
+
+        /* NAME */
 
         h1 {
             margin: 0;
-            font-size: 27px;
+
+            font-size: 28px;
+
             font-weight: 700;
+
+            letter-spacing: -0.4px;
         }
+
+
+        /* POSITION */
 
         .position {
             margin-top: 9px;
+
             color: #c9a227;
+
             font-size: 16px;
+
+            font-weight: 600;
+
+            line-height: 1.4;
         }
 
+
+        /* COMPANY */
+
         .company {
-            margin-top: 6px;
-            color: #cccccc;
+            margin-top: 7px;
+
+            color: #cfcfcf;
+
             font-size: 14px;
+
+            line-height: 1.4;
         }
+
+
+        /* BUTTON AREA */
 
         .buttons {
             margin-top: 30px;
         }
 
+
+        /* ALL BUTTONS */
+
         .button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
             width: 100%;
-            min-height: 52px;
+
+            min-height: 54px;
+
             margin: 12px 0;
-            border-radius: 13px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 15px;
+
+            padding: 15px 18px;
+
             border: none;
-            cursor: pointer;
+
+            border-radius: 14px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-decoration: none;
+
             font-family: inherit;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.15s ease,
+                opacity 0.15s ease;
         }
+
+
+        .button:active {
+            transform: scale(0.97);
+        }
+
+
+        /* SAVE CONTACT */
 
         .save {
             background: #c9a227;
+
             color: #111111;
+
+            box-shadow:
+                0 8px 25px rgba(201, 162, 39, 0.22);
         }
+
+
+        /* OTHER BUTTONS */
 
         .secondary {
             background: #292929;
+
             color: #ffffff;
+
+            border: 1px solid rgba(255,255,255,0.06);
         }
 
-        .button:active {
-            transform: scale(.98);
-        }
 
-        .footer {
-            margin-top: 25px;
-            color: #777777;
-            font-size: 12px;
-        }
+        /* MESSAGE */
 
         .message {
             display: none;
+
             margin-top: 15px;
-            padding: 13px;
-            border-radius: 10px;
+
+            padding: 14px;
+
+            border-radius: 12px;
+
             background: #292929;
+
             color: #dddddd;
+
             font-size: 13px;
+
             line-height: 1.5;
         }
+
+
+        /* FOOTER */
+
+        .footer {
+            margin-top: 27px;
+
+            color: #777777;
+
+            font-size: 11px;
+
+            letter-spacing: 0.3px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 400px) {
+
+            body {
+                padding: 15px 12px;
+            }
+
+            .card {
+                padding: 30px 20px 25px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .profile-photo {
+                width: 105px;
+                height: 105px;
+            }
+
+        }
+
     </style>
 </head>
 
+
 <body>
+
 
 <div class="card">
 
-    <div class="avatar">AB</div>
 
-    <h1>Dr. Alex Baba</h1>
+    <!-- PROFILE PHOTO -->
+
+    <img
+        src="alex-baba.jpg"
+        alt="Dr. Alex Baba"
+        class="profile-photo"
+    >
+
+
+    <!-- COMPANY LOGO -->
+
+    <img
+        src="northbridge-logo.png"
+        alt="Northbridge Stantech Group"
+        class="company-logo"
+    >
+
+
+    <!-- NAME -->
+
+    <h1>
+        Dr. Alex Baba
+    </h1>
+
+
+    <!-- POSITION -->
 
     <div class="position">
         Strategic Projects Adviser
     </div>
 
+
+    <!-- COMPANY -->
+
     <div class="company">
         Northbridge Stantech Group
     </div>
 
+
+    <!-- BUTTONS -->
+
     <div class="buttons">
 
+
         <!-- SAVE CONTACT -->
-        <button class="button save" id="saveContact">
+
+        <button
+            class="button save"
+            id="saveContact"
+        >
             ＋&nbsp; SAVE CONTACT
         </button>
 
-        <a class="button secondary"
-           href="tel:+2348037881337">
+
+        <!-- CALL -->
+
+        <a
+            class="button secondary"
+            href="tel:+2348037881337"
+        >
             ☎&nbsp; CALL
         </a>
 
-        <a class="button secondary"
-           href="mailto:aebaba@northbridgestantech.com">
+
+        <!-- WHATSAPP -->
+
+        <a
+            class="button secondary"
+            href="https://wa.me/2348037881337"
+            target="_blank"
+            rel="noopener"
+        >
+            💬&nbsp; WHATSAPP
+        </a>
+
+
+        <!-- EMAIL -->
+
+        <a
+            class="button secondary"
+            href="mailto:aebaba@northbridgestantech.com"
+        >
             ✉&nbsp; EMAIL
         </a>
 
-        <a class="button secondary"
-           href="https://northbridgestantech.com"
-           target="_blank"
-           rel="noopener">
+
+        <!-- WEBSITE -->
+
+        <a
+            class="button secondary"
+            href="https://northbridgestantech.com"
+            target="_blank"
+            rel="noopener"
+        >
             🌐&nbsp; WEBSITE
         </a>
 
+
     </div>
 
-    <div id="message" class="message"></div>
+
+    <!-- MESSAGE -->
+
+    <div
+        id="message"
+        class="message"
+    ></div>
+
+
+    <!-- FOOTER -->
 
     <div class="footer">
         Northbridge Stantech Group
     </div>
 
+
 </div>
+
 
 
 <script>
 
-const saveButton = document.getElementById("saveContact");
-const message = document.getElementById("message");
 
-const vcard = `BEGIN:VCARD
+/*
+    SAVE CONTACT
+
+    The script first attempts to use the
+    phone's native sharing system.
+
+    If the browser does not support sharing
+    VCF files, it falls back to downloading
+    the VCF.
+*/
+
+
+const saveButton =
+    document.getElementById("saveContact");
+
+
+const message =
+    document.getElementById("message");
+
+
+const vcard =
+`BEGIN:VCARD
 VERSION:3.0
 FN:Dr. Alex Baba
 N:Baba;Alex;;Dr.;
@@ -187,82 +415,141 @@ EMAIL:aebaba@northbridgestantech.com
 URL:https://northbridgestantech.com
 END:VCARD`;
 
-saveButton.addEventListener("click", async function () {
 
-    const file = new File(
-        [vcard],
-        "alex-baba.vcf",
-        {
-            type: "text/vcard"
-        }
-    );
+saveButton.addEventListener(
+    "click",
+    async function () {
 
-    /*
-     * First attempt:
-     * Use the phone's native sharing system.
-     * This can allow the user to send/import
-     * the contact through an appropriate app.
-     */
 
-    if (
-        navigator.share &&
-        navigator.canShare &&
-        navigator.canShare({ files: [file] })
-    ) {
+        const file =
+            new File(
+                [vcard],
+                "alex-baba.vcf",
+                {
+                    type: "text/vcard"
+                }
+            );
 
-        try {
 
-            await navigator.share({
-                files: [file],
-                title: "Dr. Alex Baba",
-                text: "Save Dr. Alex Baba to your contacts."
-            });
+        /*
+            TRY NATIVE MOBILE SHARING
+        */
 
-            return;
+        if (
+            navigator.share &&
+            navigator.canShare &&
+            navigator.canShare({
+                files: [file]
+            })
+        ) {
 
-        } catch (error) {
 
-            /*
-             * User cancelled the share window.
-             * Don't do anything else.
-             */
+            try {
 
-            if (error.name === "AbortError") {
+
+                await navigator.share({
+
+                    files: [file],
+
+                    title:
+                        "Dr. Alex Baba",
+
+                    text:
+                        "Save Dr. Alex Baba to your contacts."
+
+                });
+
+
                 return;
+
+
             }
+
+
+            catch (error) {
+
+
+                /*
+                    If the user cancels
+                    the share window,
+                    don't download anything.
+                */
+
+
+                if (
+                    error.name ===
+                    "AbortError"
+                ) {
+
+                    return;
+
+                }
+
+            }
+
         }
+
+
+        /*
+            FALLBACK FOR BROWSERS
+            THAT DON'T SUPPORT
+            NATIVE FILE SHARING
+        */
+
+
+        const blob =
+            new Blob(
+                [vcard],
+                {
+                    type:
+                        "text/vcard;charset=utf-8"
+                }
+            );
+
+
+        const url =
+            URL.createObjectURL(blob);
+
+
+        const link =
+            document.createElement("a");
+
+
+        link.href = url;
+
+        link.download =
+            "alex-baba.vcf";
+
+
+        document.body.appendChild(link);
+
+        link.click();
+
+        link.remove();
+
+
+        URL.revokeObjectURL(url);
+
+
+        /*
+            SHOW INSTRUCTIONS
+        */
+
+
+        message.style.display =
+            "block";
+
+
+        message.innerHTML =
+            "Your contact card is ready. Open the downloaded file to add Dr. Alex Baba to your contacts.";
+
     }
 
-    /*
-     * Fallback:
-     * If native file sharing isn't supported,
-     * download the VCF normally.
-     */
+);
 
-    const blob = new Blob(
-        [vcard],
-        { type: "text/vcard;charset=utf-8" }
-    );
-
-    const url = URL.createObjectURL(blob);
-
-    const link = document.createElement("a");
-
-    link.href = url;
-    link.download = "alex-baba.vcf";
-
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-
-    URL.revokeObjectURL(url);
-
-    message.style.display = "block";
-    message.innerHTML =
-        "Your contact file has been prepared. Open the downloaded file to add Dr. Alex Baba to your contacts.";
-});
 
 </script>
+
 
 </body>
 </html>
