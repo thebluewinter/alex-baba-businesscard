@@ -34,14 +34,20 @@
             box-shadow: 0 20px 60px rgba(0,0,0,.45);
         }
 
-        /* LARGE PROFILE PHOTO */
+        /* PROFILE PHOTO */
         .profile-photo {
             width: 180px;
             height: 180px;
             object-fit: cover;
+
+            /* Moves the visible area upward,
+               allowing more of the head to show */
+            object-position: center 25%;
+
             border-radius: 50%;
             display: block;
             margin: 0 auto 22px;
+
             border: 4px solid #c9a227;
             box-shadow: 0 8px 25px rgba(0,0,0,.35);
         }
@@ -179,7 +185,6 @@
 
 </div>
 
-
 <script>
 
 const saveButton = document.getElementById("saveContact");
@@ -206,9 +211,7 @@ saveButton.addEventListener("click", async function () {
         }
     );
 
-    /*
-     * Try the phone's native sharing system first.
-     */
+    /* Try native phone sharing first */
 
     if (
         navigator.share &&
@@ -234,10 +237,7 @@ saveButton.addEventListener("click", async function () {
         }
     }
 
-    /*
-     * Fallback for browsers that don't support
-     * native VCF sharing.
-     */
+    /* Fallback */
 
     const blob = new Blob(
         [vcard],
